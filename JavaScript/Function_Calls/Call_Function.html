@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call () Function </title>
+</head>
+<body>
+    <script type="text/javascript"> 
+        // Creating a function  with attribute id and name like a constructor ..... 
+        function Emp(id,name){
+            this.id=id;
+            this.name=name;
+        }
+
+        function Permanent_Employee(id,name){
+            Emp.call(this,id,name);    // Using the call() Function ...
+        }
+
+
+        function Temporary_Employee(id,name){
+            Emp.call(this,id,name);    // Using the call() Function ...
+        }
+
+        // Creating an objects for above functions
+        var Perm=new Permanent_Employee(10,"Ravi");
+        var Temp=new Temporary_Employee(20,"Kiran");
+        document.writeln("Permanent Employee Details are : "+Perm.id + "  " + Perm.name);
+        document.writeln("<br>");
+        document.writeln("Temporary Employee details are : "+Temp.id+ " "+Temp.name);
+        document.writeln("<br>");
+
+
+
+
+
+    </script>
+</body>
+</html>

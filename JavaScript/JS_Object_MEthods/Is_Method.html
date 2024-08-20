@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is _Method() </title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.writeln("is()_Method ");
+        var object1={
+            name:"Ganesh",
+            age:8,
+        }
+
+        var object2={
+            name:"Pranay",
+            age:8,
+        }
+
+        // Checking whether Object1 is equal to Object 2 or not
+        console.log("Checking whether Object1 is equal to Object 2 or not : ",Object.is(object1,object2));
+        
+        // Checking whether Object1.age is equal to Object2.age or not
+        console.log("Checking whether Object1.age is equal to Object2.age or not and it has same values : ",Object.is(object1.age,object2.age));
+
+        // Checking whether Object1.name is equal to Object2.name or not
+        console.log("Checking whether Object1.name is equal to Object2.name or not and it has different values : " , Object.is(object1.name,object2.name));
+
+
+    </script>
+</body>
+</html>

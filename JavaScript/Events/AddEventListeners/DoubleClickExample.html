@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoubleClick Event</title>
+  </head>
+  <style>
+    body,
+    #dblclick1,
+    #dblclick2 {
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <!-- Using Html content -->
+    <button id="dblclick1" ondblclick="HtmlDoubleClick()">
+      Html Double click
+    </button>
+
+    <!-- using js and Html tags-->
+    <h2 id="dblclick2">Double click to change content</h2>
+
+    <!-- using addEventListener() methods in js -->
+    <button id="addevent">Using AddEvent Listener</button>
+    <script>
+      // For Html content
+      function HtmlDoubleClick() {
+        document.body.style.backgroundColor = "red";
+      }
+
+      // For JS content
+      document.getElementById("dblclick2").ondblclick = function () {
+        func2();
+      };
+      function func2() {
+        document.getElementById("dblclick2").innerHTML = "welcome to world";
+      }
+
+      // For addEventListener() method in js
+      document.getElementById("addevent").addEventListener("dblclick", func3);
+      function func3() {
+        document.body.style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>

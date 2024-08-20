@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Number Validation</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #errorNumber {
+        color: red;
+        font-size: 10px;
+      }
+    </style>
+    <script>
+      function ValidateData() {
+        var phoneNumber = document.FormData.Number.value;
+        if (isNaN(phoneNumber)) {
+          // isNan => is used to check whether the entered number is number or not
+          document.getElementById("errorNumber").innerHTML =
+            "Entered Contact Number is not correct ";
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!--
+        Validating Phone Number . Checking whether the user entered only digits as phone number or not .
+    -->
+    <h3>Phone Number Validation</h3>
+    <form name="FormData" onsubmit=" return ValidateData()">
+      Enter phone Number : <input type="text" name="Number" id="" /><span
+        id="errorNumber"
+      ></span>
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

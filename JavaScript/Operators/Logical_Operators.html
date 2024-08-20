@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators </title>
+</head>
+<body>
+    <script type="text/javascript">
+        var result1=true;
+        var result2=false;
+
+        // Logical And Operator 
+        document.write("<h4> Logical AND Operator </h4>")
+        if(result1&& result1){
+            document.write("True and true is true ==> And Operator ");
+        }
+
+        document.write("<br>");
+
+        if(result1 && result2){
+            document.write("True and false is false ==> And Operator ");
+        }else{
+            document.write("True and false id False ==> And Operator ");
+        }
+
+        document.write("<br>");
+
+        // Logical OR Operator 
+        document.write("<h4>Logical OR Operator </h4>");
+        if(result1|| result2){
+            document.write("any one condition must be true ");
+        }
+
+        // Logical NOT Operator 
+        document.write("<h4> Logical NOT Operator </h4>");
+        if(!result2){
+            document.write("Actually result is false . But after using not operator result becomes true .")
+        }
+
+
+    </script>
+</body>
+</html>

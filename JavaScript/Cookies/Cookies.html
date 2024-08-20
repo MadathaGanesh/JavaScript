@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Creation</title>
+    <script type="text/javascript">
+      function SetCookie() {
+        document.cookie = "Name=Ganesh";
+      }
+
+      function GetCookie() {
+        if (document.cookie.length != 0) {
+          alert("cookie setted successfully");
+          alert(document.cookie);
+        } else {
+          alert("Cookie is not set");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- This program is used to set only one cookie -->
+    <!-- Cookies are not executed in localhost . To execute the s=cookies we need server -->
+    <input type="button" value="Set Cookie" onclick="SetCookie()" />
+    <input type="button" value="Get Cookie" onclick="GetCookie()" />
+  </body>
+</html>

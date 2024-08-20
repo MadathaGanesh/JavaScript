@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bitwise Operators </title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Bitwise is : { 8,4,2,1 }
+        var num1=5; //0101
+        var num2=9; //1001
+
+        document.write("<h4> Bitwise And Operator </h4>");
+
+        /*
+           5  =  0101   
+           9  =  1001
+    And_value =  0001 
+        */
+        var And_Operator=num1 & num2;
+        document.write("AND operator is : " + And_Operator);
+
+
+        document.write("<h4> Bitwise OR Operator </h4>");
+        var Or_operator=num1 | num2;
+        document.write("OR Operator is : "+ Or_operator);
+
+
+        /*
+        1^1=0
+        0^0=0
+        1^0=1
+        0^1=1
+        */
+
+        /*
+                0101
+                1001
+          xor = 1100  
+        */
+        document.write("<h4> Bitwise XOR Operator </h4>");
+        var xor_operator=num1^num2;
+        document.write("XOR_Operation is : "+xor_operator);
+
+
+        // When we are performing Bitwise Not Operation means then  it will give some negative number as result .
+        // First it will do the NOT operation by interchanging one and zeroes , and the it will add 1 to it . 
+        document.write("<h4> Bitwise NOT Operator </h4>");
+        var Not_num2= ~num2;
+        document.write("Original num1 bitwise is : "+num1);
+        document.write("<br>");
+        document.write("NoT Operator of Num2 is : "+Not_num2);
+
+
+        // Normal Bitwise for 5 : 0101
+        // After performing one left shift for 5 : 1010 => 10
+        document.write("<h4> Bitwise Left Operator </h4>");
+        var one_left_Shift_num1=num1<<1;
+        document.write("One Left shift on num1 is : "+one_left_Shift_num1);
+        document.write("<br>");
+
+       
+        var two_left_shift=num2<<2;   
+        document.write("Two left shift on num2 '9' is : "+two_left_shift);
+
+
+
+        // Normal Bitwise for 5 : 0101
+        // After performing one right shift for 5 : 0010  => 2
+        document.write("<h4> Bitwise Right Operator </h4>");
+        var One_right_shift=num1>>1;
+        document.write("One right shift on  5 is : "+One_right_shift);
+        document.write("<br>");
+        var two_right=num2>>2;
+        document.write("Two right shift of '9' is :  " +two_right);
+
+
+    </script>
+</body>
+</html>

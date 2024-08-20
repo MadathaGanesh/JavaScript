@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events</title>
+    <script>
+      function OnFocus() {
+        document.body.style.backgroundColor = "red";
+      }
+      function OnSubmit() {
+        alert("Form is submitted successfully");
+      }
+
+      function OnBlur() {
+        document.body.style.backgroundColor = "green";
+      }
+      function OnChange() {
+        document.body.style.backgroundColor = "pink";
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="OnSubmit()">
+      Name :
+      <input type="text" onfocus="OnFocus()" onblur="OnBlur()" />
+
+      <select id="MyDropDOwn" onblur="OnBlur()">
+        <option>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

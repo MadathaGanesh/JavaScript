@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple AddEvent Listeners Example</title>
+  </head>
+  <body>
+    <p id="line1"></p>
+    <p id="line2"></p>
+    <button id="ClickBtn">Click Me</button>
+
+    <script>
+      document.getElementById("ClickBtn").addEventListener("click", ClickBtn);
+      document.getElementById("ClickBtn").addEventListener("click", line1Fun);
+      document.getElementById("ClickBtn").addEventListener("click", line2Fun);
+
+      function ClickBtn() {
+        document.body.style.backgroundColor = "red";
+      }
+
+      function line1Fun() {
+        document.getElementById("line1").innerHTML = "Updating Line 1";
+      }
+
+      function line2Fun() {
+        document.getElementById("line2").innerHTML =
+          "updating the Line 2 content ";
+      }
+    </script>
+  </body>
+</html>

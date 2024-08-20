@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go() Method</title>
+</head>
+<body>
+    <h3>go() method is used to open specific web pages or tabs after specified pages </h3>
+    <br>
+    <script>
+        function gobackspecified(){
+            history.go(-2);  // Used to visit 2 pages before you visited 
+        }
+
+        function go(){
+            history.go(2);    // Used to visit pages after next 2 web pages
+        }
+
+    
+
+    </script>
+    <button onclick="go()"> Click me to visit next second page </button>
+    <br>
+    <button onclick="gobackspecified()"> Click me to visit next second page </button>
+
+    
+
+
+</body>
+</html>

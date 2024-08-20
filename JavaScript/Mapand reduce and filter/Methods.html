@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map , reduce and filter methods</title>
+  </head>
+  <body>
+    <h2>Map , reduce and filter methods</h2>
+    <script>
+      //Creating an array
+      // using map() function , we can get a new array from the existing array elements . Is will display values of the array one by one .
+      let arr1 = [61, 45, 27, 6, 3, 7, "Ganesh", "jakie", "AA"];
+      //Here we can store the values of new array in a variable, and then return it and console it afterwards.
+      let res1 = arr1.map((value) => {
+        // console.log(value); directly we can console here
+        return value;
+      });
+      console.log(res1);
+
+      // Reduce method
+      // Reduce() method takes array as input and returns only one value as a result .
+      // It does not change the values of an array , But it perform mathematical operations on the array elements and then return its value .
+      // EX: It takes array elements as input and then perform the sum of all elements in array and retuen its value.
+      let arr2 = [3, 2, 4, 1];
+      const res2 = arr2.reduce((value1, value2) => {
+        return value1 + value2;
+      });
+      console.log(`Using reduce() method :`, res2);
+
+      //Filter() method
+      //Filter() method is used to filter the elements from the arrays.
+      let arr3 = [3, 25, 31, 23, 12, 42, 64, 7, 97, 34];
+      let res3 = arr3.filter((value) => {
+        return !(value % 2 == 0);
+      });
+      console.log(res3);
+    </script>
+  </body>
+</html>

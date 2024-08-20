@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Objects in 3 ways</title>
+  </head>
+  <body>
+    <script>
+      document.writeln("<h3>Creating Objects in 3 ways.....</h3>");
+
+      // creating objects by using object literal (or) directly assigning values ....
+      document.writeln(
+        "<h3>creating objects by using object literal (or) directly assigning values ....</h3>"
+      );
+      var objectname = {
+        firstname: "Ganesh",
+        lastname: "Madatha",
+        age: 20,
+        address: "Warangal",
+      };
+
+      document.writeln(
+        "Object details are : " +
+          objectname.firstname +
+          "  " +
+          objectname.lastname +
+          "  " +
+          objectname.age +
+          " " +
+          objectname.address
+      );
+      document.writeln("<br>");
+
+      // creating objects by creating instance of object (or) using new keyword  ....
+
+      var ObjectName = new Object();
+      ObjectName.name = "Ganesh";
+      ObjectName.age = 21;
+      ObjectName.address = "Warangal";
+      ObjectName.pincode = 506002;
+
+      document.writeln(
+        "<h3>Object Details using new keyword (or)  Instance of object are :  </h3>"
+      );
+      for (value in ObjectName) {
+        document.writeln(ObjectName[value] + "  ");
+      }
+
+      // Creating Object by using an object constructor ........... .
+      document.writeln(
+        "<h3> Object Details using an object constructor  are :  </h3>"
+      );
+      function functionName(empid, empname, empsalary, empaddress) {
+        this.empid = empid;
+        this.empname = empname;
+        this.empsalary = empsalary;
+        this.empaddress = empaddress;
+      }
+
+      var empobject = new functionName(2, "Sai", 50000, "Hyd");
+
+      for (details in empobject) {
+        document.writeln(empobject[details] + "  ");
+      }
+    </script>
+  </body>
+</html>

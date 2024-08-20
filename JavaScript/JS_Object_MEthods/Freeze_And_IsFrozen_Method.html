@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freeze Method and IsFrozen() Method....</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h3> Freeze Method () and IsFrozen() Method...... </h3>");
+
+        var object1={   // craeting an object
+            age:12,
+        }
+
+        var object2=Object.freeze(object1);   // Applying freeze() method 
+        object2.age=54;
+        console.log("Age after using freeze() method is : ", object2.age);
+
+
+        // Checking whether the object and its value is frozen or not using IsFrozen() Method 
+
+        console.log("Applying isFrozen() Method on object1  :  ", Object.isFrozen(object1));
+        console.log("Applying isFrozen() Method on object2  :  ", Object.isFrozen(object2));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

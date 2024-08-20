@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Destructuring</title>
+  </head>
+  <body>
+    <h3>Object Destructuring in JS ES6</h3>
+    <script>
+      // Creating an object with {key:value} pair .
+      let objects = {
+        name: "Ganesh",
+        age: 21,
+        college: "VCE",
+        // Creating inner object named "movies".
+        movies: {
+          firstmovie: "DJ",
+          recentMovie: "Salaar",
+        },
+      };
+
+      // Normally we will print the above object values like this ....
+      document.writeln(`Object Values printing using regular method  : <br>
+                        Name is : ${objects.name} ....<br>
+                        Age is : ${objects.age} ....<br>
+                        College Name is : ${objects.college} ....<br>
+                        First Watched Movie is : ${objects.movies.firstmovie} ....<br>
+                        Recent Watched Movie is : ${objects.movies.recentMovie}`);
+
+      // Using Object Destructuring we will print the above object values like this ....
+      // When we using Object Destructuring we have to use same variable name (or) same key name ..
+      // Destructuring and assigning object values to the individual elements
+      let {
+        name,
+        age,
+        college,
+        movies: { firstmovie },
+        movies: { recentMovie },
+      } = objects;
+      document.writeln(`<br><br>`);
+      document.writeln(
+        `Object Values printing using Object Destructuring method .... <br>`
+      );
+      document.writeln(`Name is : ${name}... <br>
+                        Age is : ${age}...<br>
+                        College is : ${college}...<br>
+                        First Watched Movie is : ${firstmovie}...<br>
+                        Recent Watched Movie is : ${recentMovie}`);
+
+      // Using Object Destructuring and changing key values of the object  ....
+
+      let {
+        name: FullName,
+        college: ClgName,
+        movies: { firstmovie: MovieOne },
+        movies: { recentMovie: LastMovie },
+      } = objects;
+      document.writeln(`<br><br>`);
+      document.writeln(`Name is :${FullName} ....  <br>
+                            College Name is : ${ClgName}....  <br>
+                            First Movie is : ${MovieOne} ...<br>
+                            Last Watched movie is : ${LastMovie}`);
+    </script>
+  </body>
+</html>

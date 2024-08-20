@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <h3>Arrow Functions</h3>
+    <h4>Normal ES5 function Example :</h4>
+    <script>
+      function addition(x, y) {
+        let addition = x + y;
+        return "addition using ES5 function is  : " + addition;
+      }
+      document.writeln(addition(10, 20));
+
+      document.writeln("<h4>Using ES6 Arrow Functions </h4>");
+      // :::::::  when we have multiple parameters then we have to use parenthesis () :::::::
+      const subtraction = (a, b, c) => {
+        let result = a * b + c;
+        return " with multiple parameters :: result is : " + result;
+      };
+      document.writeln(subtraction(10, 2, 5));
+
+      document.writeln("<br><br>");
+      // :::::::  when we have single parameter then we don't need to use parenthesis () :::::::
+      const greeting = (name) => {
+        return " :::  with single parameter :: name is :  Hii " + name;
+      };
+      document.writeln(greeting("Nanna movie "));
+    </script>
+  </body>
+</html>

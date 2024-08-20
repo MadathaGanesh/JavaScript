@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation 1</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        
+    </style>
+    <script>
+      function FormValidate() {
+        var name = document.myForm.fullname.value;
+        var pass = document.myForm.password.value;
+
+        if (name ==" " || name == null) {
+          alert("Name cannot be blank");
+          return false;
+        } else if (pass.length < 6) {
+          alert("Password must be greater than 6 digits");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Here I will validate the name and password  . So that the name value cannot be null or empty. and the value password must not be less than characters .-->
+    <h3>Registration Form </h3>
+    <form name="myForm" method="post" onsubmit="return FormValidate()">
+      FullName : <input type="text" name="fullname" id="" /> <br /><br />
+      Password : <input type="password" name="password" id="" /> <br /><br />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

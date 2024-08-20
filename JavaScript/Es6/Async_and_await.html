@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async function and await keyword</title>
+  </head>
+  <body>
+    <h4>async function and await keyword</h4>
+    <script>
+      function functionname() {
+        let promise1 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Promise 1 resolved ..........");
+          }, 2000);
+        });
+
+        let promise2 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Promise 2 resolved ......... ");
+          }, 8000);
+        });
+        let combinedPromise = Promise.all([promise1, promise2]);
+        return combinedPromise;
+      }
+
+      // Using async and await
+      async function display() {
+        let data = await functionname();
+        console.log(data);
+      }
+      display();
+    </script>
+  </body>
+</html>

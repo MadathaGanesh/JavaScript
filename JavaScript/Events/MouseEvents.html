@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events</title>
+    <style>
+      .click {
+        margin-left: 40%;
+        margin-top: 5%;
+      }
+      .rect {
+        height: 60px;
+        width: 60px;
+        background-color: brown;
+        margin-left: 40%;
+        margin-top: 1%;
+      }
+    </style>
+    <script>
+      function OnClickFunction() {
+        document.body.style.backgroundColor = "green";
+      }
+
+      function OnMouseOver() {
+        document.body.style.backgroundColor = "pink";
+      }
+
+      function OnMouseOut() {
+        document.body.style.backgroundColor = "Grey";
+      }
+
+      function OnMousedown() {
+        document.body.style.backgroundColor = "cyan";
+      }
+
+      function OnMouseUp() {
+        document.body.style.backgroundColor = "blue";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Onmouseclick() Function -->
+    <button class="click" onclick="OnClickFunction()">Onclick Event</button>
+    <br /><br />
+    <!-- OnmouseOver() Function -->
+    <div
+      class="rect"
+      onmouseover="OnMouseOver()"
+      OnmouseOut="OnMouseOut()"
+      onmousedown="OnMousedown()"
+      onmouseup="OnMouseUp()"
+    ></div>
+  </body>
+</html>

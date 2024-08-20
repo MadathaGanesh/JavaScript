@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Arrays in 3 ways</title>
+  </head>
+  <body>
+    <script>
+      // Creating Arrays in 3 ways ..
+      // 1) By Using Array Literal
+      // 2) By using new keyword
+      // 3) By using constructor
+
+      document.writeln(
+        "<h4>Creating array using Array Literal or Direct Assigning values to array  .... </h4>"
+      );
+      //syntax :var arrayName=new Array("value1","value2","value3",.....);
+      var employees = ["Ganesh", "Akshay", "Sai", "Ram", "Karthik", "Kiran"];
+
+      document.writeln(
+        "<h5>Printing Array Values using for Loop and length method ...</h5> "
+      );
+      for (i = 0; i < employees.length; i++) {
+        document.writeln(employees[i] + "<br>");
+      }
+
+      document.writeln("<h4>Creating array using new keyword   .... </h4>");
+      var actors = new Array();
+      actors[0] = "Allu Arjun";
+      actors[1] = "Prabhas";
+      actors[2] = "Ram";
+      actors[3] = "Kalyan Ram";
+      actors[4] = "prakash Raj";
+
+      document.writeln(
+        "<h5>Printing Array Values using for of Loop  ...</h5> "
+      );
+      for (value of actors) {
+        document.writeln(value + "<br>");
+      }
+
+      document.writeln("<h4>Creating array using constructor   .... </h4>");
+      var movies = new Array(
+        "Kala",
+        "Pasha",
+        "Jailer",
+        "Rajini",
+        "Dil",
+        "Love Today"
+      );
+
+      document.writeln(
+        "<h5>Printing Array Values using for of Loop  ...</h5> "
+      );
+      for (moviename of movies) {
+        document.writeln(moviename + " <br>");
+      }
+    </script>
+  </body>
+</html>

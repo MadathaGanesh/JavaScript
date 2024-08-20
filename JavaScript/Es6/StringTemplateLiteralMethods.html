@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String template literals Methods</title>
+  </head>
+  <body>
+    <!--
+        4 String Template Literal Methods 
+        .startsWith()
+        .endsWith()
+        .contains()
+        .repeat(value like 10 or 20)
+    -->
+    <h3>String template literals Methods</h3>
+    <script>
+      // These String literal methods are case sensitive and their result is only boolean values {i.e; true and false}
+      let name = "JavaScript";
+      let age = 21;
+      document.writeln("startsWith() method :");
+      document.writeln(`${name}`.startsWith("J"));
+      document.writeln(`${name}`.startsWith("j"));
+      document.writeln("<br>");
+
+      document.writeln("endsWith() method :");
+      document.writeln(`${name}`.endsWith("T"));
+      document.writeln(`${name}`.endsWith("t"));
+      document.writeln("<br>");
+
+      document.writeln("contains() method :");
+      document.writeln(`${name}`.includes("ava"));
+      document.writeln(`${name}`.includes("Ava"));
+      document.writeln("<br>");
+
+      document.writeln("repeat() method :");
+      document.writeln(`${name} `.repeat(5));
+      document.writeln("<br>");
+      document.writeln(`${name} ${age}..   `.repeat(8));
+      document.writeln("<br>");
+
+      document.writeln("replace() method :");
+      document.writeln("<br>");
+      document.writeln(` ${name}`.replace("JavaScript", "Vinay"));
+    </script>
+  </body>
+</html>

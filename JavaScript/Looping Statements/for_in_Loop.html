@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For-in Loop Example </title>
+</head>
+<body>
+    <script>
+        // This For-in Loop works only with Objects and it does not work with other primitive and Non-Primitive Datatypes .
+        document.writeln("<h4> For in Loop : It is only used with Objects and does not work with primitive datatypes and non-primitive datatypes </h4>")
+        var ObjectName={
+            FirstName:"Ganesh",
+            LastName : "Madatha",
+            age: 21,
+            Address : "Shivanagar"
+        }
+
+        var temp=" ";
+        document.writeln("Person Details are : ");
+        for (itr in ObjectName){
+            temp=temp+ObjectName[itr] + "  ";
+        }
+        document.writeln(temp);
+
+
+    </script>
+</body>
+</html>

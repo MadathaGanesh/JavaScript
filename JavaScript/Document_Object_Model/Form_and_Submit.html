@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and submit </title>
+</head>
+<body>
+    <script>
+        // getting value from the document using the form name , value attribute etc 
+
+        function details(){
+            var name=document.form1.name.value;
+            var age=form1.age.value;
+            alert("welcome "+name +" and your age is : "+age);
+        }
+    </script>
+    <h3>Form and button tag to get entered data to display </h3>
+    <br>
+    <form  name="form1">
+    Enter Your Full Name : 
+    <input type="text" name="name" >
+    <br><br>
+    Enter Your age :
+    <input type="text" name="age">
+    <br><br>
+    <button onclick="details()"> Click Me !</button>
+    </form>
+</body>
+</html>

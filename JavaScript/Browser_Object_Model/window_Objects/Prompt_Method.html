@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Method </title>
+</head>
+<body>
+    <script>
+        // Prompt is used to take input from the user .... 
+        document.writeln("window.prompt() method .... ");
+        document.writeln("<br>");
+        function msg(){
+            var name=window.prompt("Enter your name : ");
+            var age=window.prompt("Enter your age : ");
+            if(age>=18){
+                window.alert(name + " You are eligible for vote and your age is : "+age);
+            }else {
+                window.alert(name + " you are not eligible for vote  and your age is : "+age);
+            }
+        }
+    </script>
+    <button onclick="msg()">Click Me!</button>
+</body>
+</html>

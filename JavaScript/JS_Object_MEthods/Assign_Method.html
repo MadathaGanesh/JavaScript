@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign() Method  </title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.writeln("<h4> Assign() Method is used to assign new values to the existing object values ....   .......  ... </h4>");
+        
+        var object1={
+            A:1,
+            B:2,
+            C:3
+        }
+
+        var object2={
+            D:4,
+            E:5,
+            F:6
+        }
+
+
+        console.log("Object 1 values are : ");
+        console.log( object1);
+        
+        console.log("Object 2 values are : ");
+        console.log( object2);
+
+        var object3=Object.assign({C:30,E:40},object1);  // Here new D value will be added to object1 
+        console.log("Object 3 values are  : " , object3);
+
+        var object4=Object.assign({G:100,H:110,I:120},object2);  // Here G,H,I values are added to object 2
+        console.log("Object 4 values are : " ,object4);
+
+    </script>
+</body>
+</html>

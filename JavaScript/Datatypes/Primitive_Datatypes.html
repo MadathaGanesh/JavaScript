@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive Datatypes </title>
+</head>
+<body>
+    <Script type="text/javascript">
+        var intdataype=234;
+        var chardatatype='H';
+        var doubledatatype=12.3434;
+        var floatdatatype=23.43;
+        var Stringdatatype="Ganesh";
+        document.write("Integer datatype :"+intdataype);
+        document.write("<br>");
+        document.write("char datatype : "+chardatatype);
+        document.write("<br>");
+        document.write("double datatype : "+doubledatatype);
+        document.write("<br>");
+        document.write("float datatype : "+ floatdatatype);
+        document.write("<br>");
+        document.write("String datatype : "+Stringdatatype);
+        document.write("<br>");
+        
+        var age=23;
+        if(age>18){
+            document.write("eligible for vote ");
+            document.write("<br>");
+            document.write(true);
+        }else{
+            document.write("Not eligible");
+            document.write("<br>");
+            document.write(false);
+        }
+
+        document.write("<br>");
+
+        var repeat=10;
+        var name="  Nanbi";
+        var num2=100;
+        document.write(repeat+name+num2);
+        document.write("<br>");
+        document.write(num2+repeat+name);
+
+        document.write("<br>");
+    
+        var nullvalue=null;  // declaring of null value
+        document.write("Null value declared : "+nullvalue);
+        document.write("<br>");
+        var undefinedvalue;  // Declaring of undefined value 
+        document.write("Undefined value : "+undefinedvalue)
+    
+        document.write("<br>");
+        document.write("double equal to '==' will check only whether the variable value is same or not ..");
+        document.write("<br>");
+        if(nullvalue==undefinedvalue){
+            document.write(true);
+        }else{
+            document.write(false)
+        }
+
+        document.write("<br>");
+        document.write("Triple equal to '===' will check whether the variable value and datatype is same or not . If both variable value and datatype is same means then it returns True otherwise returns False ...")
+        document.write("<br>");
+        if(nullvalue===undefinedvalue)
+            document.write(true)
+        else
+            document.write(false)
+
+</Script>
+</body>
+</html>

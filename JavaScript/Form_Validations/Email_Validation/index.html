@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Validation</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+    <script>
+      //   function EmailValid() {
+      //     var InbuildEmail = document.FormData.Email.value;
+      //     alert(InbuildEmail);
+      //   }
+
+      function ManualEmail() {
+        var EmailManual = document.ManualEmailForm.manualmail.value;
+        var atPosition = EmailManual.indexOf("@");
+        var dotposition = EmailManual.indexOf(".");
+        if (
+          atPosition < 1 ||
+          dotposition < atPosition + 2 ||
+          dotposition + 2 >= EmailManual.length
+        ) {
+          alert("Email is not valid ");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <h3>Email Validation</h3>
+    <h4>Email Validation using inbuild email input method</h4>
+    <form method="post" name="FormData" onsubmit="return EmailValid()">
+      Email : <input type="email" name="Email" /> <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br /><br />
+    <hr />
+    <hr />
+    <br /><br /> -->
+    <h4>Email Validation by Manually</h4>
+    <form method="post" name="ManualEmailForm" onsubmit="return ManualEmail()">
+      Enter Email : <input type="text" name="manualmail" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

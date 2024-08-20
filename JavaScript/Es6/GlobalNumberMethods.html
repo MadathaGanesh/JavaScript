@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Number Methods</title>
+  </head>
+  <body>
+    <h3>Global Number Methods</h3>
+    <script>
+      // isFinite() method
+      // isNaN() method
+      // isInteger() method
+      document.writeln(`<h3> isFinite() method</h3>`);
+      let num1 = 10;
+      document.writeln(`isFinite() method : `, isFinite(num1), `<br>`);
+      let num2 = 34.33223434343434333434;
+      document.writeln(`isFinite() method : `, isFinite(num2), `<br>`);
+      let num3 = Infinity;
+      document.writeln(
+        `isFinite() method- Infinity : `,
+        isFinite(num3),
+        `<br>`
+      );
+      let num4 = NaN;
+      document.writeln(`isFinite() method -NaN : `, isFinite(num4), `<br>`);
+      let num5 = -23;
+      document.writeln(
+        `isFinite() method - Negative Number : `,
+        isFinite(num5),
+        `<br>`
+      );
+
+      document.writeln(`<h3> isFinite() method</h3>`);
+      let num11 = -34;
+      document.writeln(`isNan() method : `, isNaN(num11), `<br>`);
+      let name = `Ganesh`;
+      document.writeln(`isNan() method - String Name : `, isNaN(name), `<br>`);
+      let num22 = Infinity;
+      document.writeln(`isNan() method - Infinity : `, isNaN(num22), `<br>`);
+      let num33 = "Ganesh";
+      document.writeln(
+        `isNan() using number method : `,
+        Number.isNaN(num33),
+        `<br>`
+      );
+      document.writeln(`isNan() using Global method : `, isNaN(num33), `<br>`);
+
+      document.writeln(`<h3> isInteger() method</h3>`);
+      let num12 = 234;
+      document.writeln(
+        `isInteger() Method -positive Number : `,
+        Number.isInteger(num12),
+        `<br>`
+      );
+      let num23 = -42323;
+      document.writeln(
+        `isInteger() Method - Negative Number : `,
+        Number.isInteger(num23),
+        `<br>`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Promises</title>
+  </head>
+  <body>
+    <h4>Basic Promises using .then() and .catch()</h4>
+    <script>
+      document.writeln("Promise Started ");
+
+      // When we try to execute multiple promises parallelly , then if we use settimeout() method  means then all promises will execute at same time.
+
+      // First Promise
+      let mypromise1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          document.writeln("promise executed after 5 seconds and resolved.  ");
+          resolve(true);
+          //reject(new Error("Passing error manually"));  ==> used to through a new error manually .
+        }, 5000);
+      });
+      console.log(mypromise1);
+
+      // Second Promise
+      let mypromise2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          document.writeln("promise executed after 5 seconds is rejected.");
+          //resolve(true);
+          reject(new Error("Passing error manually")); // ==> used to through a new error manually .
+        }, 5000);
+      });
+      console.log(mypromise2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swapping of two variables</title>
+  </head>
+  <body>
+    <h2>Swapping of two variable values using temp variable</h2>
+    <script>
+      let a = 20;
+      let b = 5;
+      document.writeln(
+        `Values before swapping ::: A value is : ${a} and B value is :${b}`
+      );
+      document.writeln("<br><br>");
+
+      let temp = a;
+      a = b;
+      b = temp;
+      document.writeln(`A value is : ${a}  and B value is :${b}`);
+
+      document.writeln("<br><br>");
+      document.writeln(
+        "    <h2>Swapping of two variable values without using Array Destructuring  </h2>"
+      );
+
+      [a, b] = [b, a];
+      document.writeln(`A value is : ${a}  and B value is :${b}`);
+    </script>
+  </body>
+</html>

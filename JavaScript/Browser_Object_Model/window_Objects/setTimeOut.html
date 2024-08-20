@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut() Method ....</title>
+</head>
+<body>
+    <!-- Click me to open youtube after some specified time i.e; 2 seconds  -->
+    <button onclick="msg()">Click me to open youtube</button>
+
+    <script type="text/javascript">
+        document.write("<br>");
+        document.writeln("setTimeOut() Method ....");
+        document.write("<br>");
+        document.writeln("It will perform some actions like opening website and giving an alerts after specified time");
+
+        function msg(){
+            setTimeout(
+                function(){
+                    open("https://www.youtube.com/")
+                },2000);
+        }
+
+    </script>
+    
+</body>
+</html>

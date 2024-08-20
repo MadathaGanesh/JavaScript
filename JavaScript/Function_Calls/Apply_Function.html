@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Function () Example </title>
+</head>
+<body>
+    <script>
+        var array=[10,2,4,6,12,45,23,54];
+        // We can use null or this keyword when we are working with arrays 
+        var maxNum=Math.max.apply(null,array);
+        document.writeln("Maximum Number in array is : "+maxNum);
+        document.writeln("<br>");
+        var minNum=Math.min.apply(this,array);
+        document.writeln("Minimum Number in array is : "+minNum);
+
+        document.writeln("<br>");
+        document.writeln("Printing array values using for of loop .... ");
+        document.writeln("<br>");
+        for(value of array){
+            document.writeln(value);
+        }
+        
+
+
+    </script>
+</body>
+</html>

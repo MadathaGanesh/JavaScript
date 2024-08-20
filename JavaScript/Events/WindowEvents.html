@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Events</title>
+    <script>
+      function Onreload() {
+        alert("Window is reloaded");
+      }
+
+      function OnResize() {
+        document.body.style.backgroundColor = "red";
+      }
+    </script>
+  </head>
+  <body onload="Onreload()" onresize="OnResize()"></body>
+</html>

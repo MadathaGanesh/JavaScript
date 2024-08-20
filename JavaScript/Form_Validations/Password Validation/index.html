@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation 2</title>
+    <script>
+      function MatchPassword() {
+        var CurrentPassword = document.FormData.password1.value;
+        var confirmpassword = document.FormData.password2.value;
+        if (CurrentPassword == confirmpassword) {
+          alert("Password Matched");
+          return true;
+        } else {
+          alert("Password not matched");
+          return false;
+        }
+      }
+    </script>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Form validation 2 is used to check whether the passwords entered both times should be same or not . -->
+    <h3>Form Validation 2</h3>
+    <form name="FormData" method="post" onsubmit="return MatchPassword()">
+      CurrentPassword :
+      <input type="password" name="password1" /><br /><br />
+      VerifyPassword :
+      <input type="password" name="password2" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

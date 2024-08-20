@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise with .then and .catch</title>
+  </head>
+  <body>
+    <h4>Promise with .then and .catch</h4>
+    <script>
+      // Promise 1
+      let promise1 = new Promise((resolve, reject) => {
+        console.log("First promise started");
+        setTimeout(() => {
+          console.log("First promise Executed successfully");
+          resolve("OK");
+          //reject("False");
+        }, 5000);
+      });
+
+      //Promise 2
+      let promise2 = new Promise((resolve, reject) => {
+        console.log("Second Promise Started");
+        setTimeout(() => {
+          console.log("Second promise result");
+          //resolve("OK");
+          reject(new Error("Error passed by user manually"));
+        }, 5000);
+      });
+      console.log(promise1, promise2);
+
+      // .then() to get the result value .
+      promise1.then((value) => {
+        console.log(`Promise 1 value is : `, value);
+      });
+
+      // .catch() to handle the error value .
+      promise2.catch((error) => {
+        console.log(`promise2 rejected value is :`, error);
+      });
+
+      // We can write both .then() and .catch() in one statement like this .
+      promise2
+        .then((values) => {
+          console.log(`Promise 2 values are `, values);
+        })
+        .catch((errors) => {
+          console.log(`Promise 2 errors are `, errors);
+        })
+        .finally(() => {
+          console.log("Promise 2 Finally value executed");
+        });
+    </script>
+  </body>
+</html>

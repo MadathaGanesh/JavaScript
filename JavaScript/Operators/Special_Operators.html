@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Operators in JAvaScript </title>
+</head>
+<body>
+    <script>
+        document.write("<h4>Ternary Operator or Conditional Operator </h4>");
+        var num1=10;
+        var num2=14;
+        let res= (num1<num2)?'lesser':'greater';
+        document.write('num1 is '+ res +' than num2');
+        document.write("<br>");
+
+        var num1=36;
+        var num2=17;
+        var res2=(num1>num2)?"Greater":"Lesser";
+        document.write("Number 1 is  "+ res2 + " than Number 2");
+
+
+        document.write("<h4> Comma Operator </h4>");
+        // Multiple values are assigned to the single variable by using (,) operator or symbol, but only last value will be assigned to the variable 
+        // If we change the last value , then the result will also change bcoz the always last value is the result .
+        var num3=(4,6,34,7,9);
+        document.write("USing comma operator the value assigned to variable is : "+num3);
+        document.write("<br>");
+        var num4=(4,6,34,7,8);
+        document.write("USing comma operator the value assigned to variable is : "+num4);
+
+
+        document.write("<h4> Delete Operator </h4>");
+        // It is used to delete the value from a function or class etc .
+        var person ={
+            FirstName:"Ganesh",
+            LastName:"Madatha",
+            age:21,
+            newage:22,
+            Gender:"Male",
+        };
+        document.write("Person Details are   :  <br>  Full Name is :" +person.FirstName + person.LastName + 
+        " <br> Gender is : " +person.Gender +" <br> Age is : "+person.age );
+        
+         delete person.age; // Deleting age  of a person
+         document.write("<br>");
+         document.write("Person details after deleting age is : "+ "<br>  Full Name is :" +person.FirstName + person.LastName 
+         +" <br> Age is : "+person.age + " <br> Gender is : " +person.Gender )
+
+
+         document.write("<h4> in property Operator </h4>");
+         // Checks whether if the given property or value is there in object or not .
+         var AgeofPerson= 'age' in person?true:false;
+         document.write("Age of person is : "+person.age);  // Age is displayed as undefined bcoz I removed the age value and no new value is assigned .
+         document.write("<br>");
+         var GenderOfPerson='Gender' in person?true:false;
+         document.write("Gender of Person is : "+person.Gender);
+
+
+         document.write("<h4> instanceof Operator </h4>");
+         // Check whether the object is an instance of given type like ( Array , Object , String )
+         document.write("If person is an instance of String : " + (person instanceof String));
+
+
+         document.write("<h4> new Operator  or creating a new object for class . </h4>");
+        class classname{  // Creating a class
+
+        }
+
+        var classobj=new classname(); // Creating an object for class 
+
+
+        document.write("<h4> instanceof Operator </h4>");
+        // Used to check the datatype of the variable 
+        document.write("Datatype of age is : "+typeof(person.newage));
+        document.write("<br>");
+        document.write("Datatype of first name is : "+ typeof(person.FirstName));
+
+
+        document.write("<h4> void  Operator </h4>");
+        // It does not return any value 
+        javascript :void functionname();
+
+
+    </script>
+</body>
+</html>

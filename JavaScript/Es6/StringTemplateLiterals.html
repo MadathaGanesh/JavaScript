@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template Literals</title>
+  </head>
+  <body>
+    <h3>String Template Literals ==> `${expression}`</h3>
+
+    <script>
+      document.writeln("<h4>In ES5 we use double quotations </h4>");
+      document.writeln("My name is Ganesh . My age is 21");
+
+      document.writeln("<h4>In ES6 we use backtick (``) symbol .</h4>");
+      document.writeln(`My name is Ganesh . My age is 21`);
+
+      document.writeln(
+        "<h4>In ES5 we use (+) plus symbol to concatenate . </h4>"
+      );
+      let name = "Ganesh";
+      let age = 21;
+      document.writeln("My name is : " + name + " . My age is : " + age);
+
+      document.writeln(
+        "<h4>In ES6 we use ${variablename} to concatenate . </h4>"
+      );
+      document.writeln(`My name is ${name} and My age is ${age}`);
+    </script>
+  </body>
+</html>

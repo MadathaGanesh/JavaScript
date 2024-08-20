@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Method .. .   ...  </title>
+</head>
+<body>
+    <script type="text/javascript">
+        function functionname(studid,studname,studage,studbranch,studfees){
+            this.studid=studid;
+            this.studname=studname;
+            this.studage=studage;
+            this.studbranch=studbranch;
+            this.studfees=studfees;
+
+            this.updatefees=updatefees;
+            function updatefees(newfees){
+                this.studfees=newfees;
+            }
+
+        }
+
+        var object=new functionname(2,"Akhil",22,"CSE",35000);
+        document.writeln("<h3> Creating a method ....</h3>");
+
+        document.writeln(object.studname + " age is  :  " + object.studage + " . whose branch is : "+object.studbranch + " and there current fees is : "+ object.studfees);
+        document.writeln("<br>");
+        object.updatefees(50000);
+        document.writeln(object.studname + " age is  :  " + object.studage + " . whose branch is : "+object.studbranch + " and there current fees is : "+ object.studfees);
+
+
+    </script>
+</body>
+</html>

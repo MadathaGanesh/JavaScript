@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById()  Example.......</title>
+</head>
+<body>
+    <h3 style="text-align: center;"> getElementById()  Example.......   </h3>
+    <br>
+    <form >
+        Enter your contact Number :
+        <input type="text" id="number">
+        <br><br>
+        <button onclick="details()"> Click Me !</button>
+    </form>
+
+
+    <script>
+        function details(){
+            var number=document.getElementById("number").value;
+            alert("Your Number is : "+number);
+
+            var res=confirm("Is your number correct ?");
+            if(res==true){
+                alert("thanks for entering correct number");
+            }else{
+                alert("Enter correct Number");
+            }
+
+        }
+    </script>
+</body>
+</html>

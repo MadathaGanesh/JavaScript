@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Declaration Keywords </title>
+</head>
+<body>
+    <script>
+        let age=30;  // Global variable
+        document.write("x value using let is : "+ age)
+        var name="Ganesh";
+        document.write("<br>");   // adding br tag in script tag  
+        document.write("Using var keyword , Name is : "+name);
+        document.write("<br>");   // adding br tag in script tag  
+        // we cannot use same variable when we are using let keyword , it will show an error .
+
+        var name="Pranay";
+        document.write("Reassingning same variable using var keyword : "+name)
+
+        
+
+        // Declaring a function using function keyword
+        function function1(){   
+            document.write("<br>");   // adding br tag in script tag  
+            const a=123;    // Local Variable
+            document.write("Local Variable is : "+a)
+        }
+        function1();  // Calling a function using function name
+       // document.writeln("Accessing local variable outside scope  will show an error:"+a)
+
+    </script>
+</body>
+</html>

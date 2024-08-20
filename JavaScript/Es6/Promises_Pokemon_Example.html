@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises in JS</title>
+  </head>
+  <body>
+    <h4>Promises in JS</h4>
+    <script>
+      function getPromise(url) {
+        let myPromise = new Promise(function (myResolve, myReject) {
+          // Promise Syntax
+          let req = new XMLHttpRequest();
+          req.open("GET", url);
+          req.onload = function () {
+            if (req.status == 200) {
+              myResolve(req.response);
+            } else {
+              myReject(`Their is an error`);
+            }
+          };
+          req.send();
+        });
+        return myPromise;
+      }
+
+      // Getting pokemon details from URL
+      let poki_url = "https://pokeapi.co/api/v2/pokemon?limit=5";
+      let promisee = getPromise(poki_url);
+
+      const consumer = () => {
+        promisee.then(
+          (result) => {
+            document.writeln(result);
+          },
+          (error) => {
+            document.writeln(error);
+          }
+        );
+      };
+      consumer();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator</title>
+  </head>
+  <body>
+    <h3>Spread Operator in JS ES6</h3>
+    <script>
+      // Using Spread Operator we can quickly copy all elements of an array (or) apart / some elements of an array.
+      // three dots (...) represents Spread operator
+      // In ES5 we used apply() method , But In ES6 we can replace apply() method with spread operator.
+
+      function sum(a, b, c) {
+        document.writeln(`<h4>Using ES5</h4> <br>`);
+        document.writeln(`Sum is : ${a + b + c}`);
+      }
+      //sum(1, 2, 3);
+      let array = [5, 13, 2];
+      sum.apply(this, array);
+
+      document.writeln(`<h4>Using ES6</h4> <br>`);
+      // In ES5 we used apply() method , But In ES6 we can replace apply() method with spread operator.
+      function add(a, b, c) {
+        document.writeln(`Printing array values are : `, ...arrayvalues, `  `);
+        document.writeln(`<br> Sum is : ${a + b + c}`);
+      }
+      let arrayvalues = [10, 20, 30];
+      add(...arrayvalues);
+
+      // In ES5 we used concat() method , But In ES6 we can replace concat() method with spread operator.
+      document.writeln(
+        `<h4>Concatenating Array elements Normally using ES5 ...</h4> <br>`
+      );
+      let arr1 = [1, 2, 3];
+      let arr2 = [4, 5, 6];
+      arr1 = arr1.concat(arr2);
+      document.writeln(`Concatenated elements are : ${arr1}`);
+
+      document.writeln(
+        `<h4>Concatenating Array elements using ES6 Spread Operator  ...</h4> <br>`
+      );
+      let array1 = [1, 2, 3];
+      let array2 = [4, 5, 6];
+      let array3 = [7, 8, 9];
+      let concat = [...array1, ...array2, ...array3];
+      document.writeln(
+        `Concatenated elements using spread operator is : ${concat}`
+      );
+
+      // In ES5 we used copy() method , But In ES6 we can replace copy() method with spread operator.
+      document.writeln(`<h4>Using copy() method in ES5</h4>`);
+      let ar1 = [1, 2, 3];
+      let ar2 = ar1;
+      ar2.push(4, 5);
+      document.writeln(`Copied ar1 elements are :`, ar2, `<br>`);
+      document.writeln(`real ar1 elements are :`, ar1);
+
+      document.writeln(
+        `<br><h4>Using spread operator to copy array elements in ES6</h4>`
+      );
+      let arra1 = [1, 2, 3];
+      let arra3 = [7, 8, 9];
+      document.writeln(`Arra1 elements are : `, arra1, `<br>`);
+      let arra2 = [...arra1, 4, 5, 6, ...arra3];
+      document.writeln(`copied updated arra2 elements are `, arra2, `<br>`);
+      document.writeln(
+        `Arra1 elements after copied new elements in arr2 are : `,
+        arra1,
+        `<br>`
+      );
+    </script>
+  </body>
+</html>

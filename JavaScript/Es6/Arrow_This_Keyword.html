@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function with This Keyword</title>
+  </head>
+  <body>
+    <h2>Arrow function with This Keyword</h2>
+    <!-- This refers to the current object/ variable / function .-->
+    <script>
+      const person = {
+        // object name is person
+        test() {
+          // method name test
+          setTimeout(() => {
+            console.log(this);
+          }, 1000); // 1second=1000 milliseconds .
+          setTimeout(function () {
+            console.log(this);
+          }, 2000);
+        },
+      };
+      person.test();
+    </script>
+  </body>
+</html>

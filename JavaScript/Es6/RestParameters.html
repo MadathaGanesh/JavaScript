@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameters</title>
+  </head>
+  <body>
+    <h3>Rest Parameters in JS ES6</h3>
+
+    <script>
+      document.writeln(
+        "<h4>Normally without rest parameters we can perform calculations like this ...</h4>"
+      );
+      function addition(a, b, c) {
+        document.writeln(`Addition is : ${a + b + c} `);
+      }
+      // Here it will take only 3 parameter values bcoz only 3 arguments is only declared at the time of declaration.
+      addition(5, 10, 15, 20, 25);
+
+      // Using Rest parameters in ES6 .
+      // (...) triple dots is represented as rest parameter.
+      // when rest parameter is there at the end of function , then it is known as rest parameter , so that it can store any number of values as an array...
+
+      document.writeln("<h4>Using REST Parameters in ES6...</h4>");
+      function add(...inputs) {
+        let total = 0;
+        for (let i of inputs) {
+          total += i;
+        }
+        document.writeln(`Total sum is : ${total}`);
+      }
+      add(1, 2, 3, 4, 5, 7, 8, 5, 34);
+
+      document.writeln(
+        "<h4> Another Example Using REST Parameters in ES6...</h4>"
+      );
+      // Here a, b are value and
+      // Then c values will become an array except a and b .
+      function movies(a, b, ...c) {
+        document.writeln(`First Element is : ${a} <br>`);
+        document.writeln(`Second Element is : ${b} <br>`);
+        // Here the "C" elements displayed like an array elements bcoz " while C Parameter we are using rest parameter ."
+        document.writeln(`C Elements are : ${c}<br>`);
+        document.writeln(`No of elements in C Array is : `, c.length);
+        document.writeln("<br>");
+        document.writeln(`First element in C Array is : ${c[0]}<br>`);
+        document.writeln(`Last element in C Array is : ${c[3]}<br>`);
+      }
+      movies("RRR", "Allu Arjun", "Shirish", "Ram", "Sanjay dutt", "Rana");
+    </script>
+  </body>
+</html>

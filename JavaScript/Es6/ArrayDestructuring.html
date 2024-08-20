@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Destructuring</title>
+  </head>
+  <body>
+    <h3>Array Destructuring</h3>
+    <script>
+      document.writeln("In ES5 example ");
+      let movies = ["RRR", "Nayak", "Evadu", "A a", "Bhadra"];
+      let first = movies[0];
+      let second = movies[1];
+      let third = movies[2];
+      let fourth = movies[3];
+      document.writeln(
+        "\n First movie is " +
+          first +
+          " .Second movie is" +
+          second +
+          " .Third movie is" +
+          third +
+          " .Fourth movie is" +
+          fourth
+      );
+
+      document.writeln("<br>");
+      document.writeln("<h3>In ES6 example using Array Destructuring </h3>");
+      document.writeln("<br>");
+      // Using Array Destructuring , First we have to assign the values to the variable and then assign the array name to it .
+      let [one, two, three, four, five] = movies;
+      document.writeln(`First movie is ${one}.
+      Second movie is ${two} .
+      Third movie is ${three} .
+      Fourth movie is ${four} .
+      Fifth movie is ${five}`);
+
+      // Using .length function to know the length of array
+      document.writeln("<br>");
+      document.writeln("<br>");
+      document.writeln(`No of movies are there is : `, movies.length);
+
+      // Use "comma" (,) to skip the elements in array and print remaining elements .
+      document.writeln("<br>");
+      let [firstmovie, , , , lastmovie] = movies;
+      document.writeln(
+        `First movie in list is : ${firstmovie} ... and the last movie in the list is : ${lastmovie}`
+      );
+
+      document.writeln("<br>");
+      let [firstm, secondm, , ,] = movies;
+      document.writeln(
+        `First Movie is : ${firstm} ... and second movie is : ${secondm}`
+      );
+
+      document.writeln("<br>");
+      let [oneone, , threethree, ,] = movies;
+      document.writeln(
+        `First movie is : ${oneone}... and third movie is : ${threethree}`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenated Arrays Using PUsh and Apply .... </title>
+</head>
+<body>
+    <script>
+        var array1=[1,2,3,4,5];
+        var array2=[6,7,8,9,10];
+        document.writeln("Array 1 elements are : ");
+        for (value of array1){
+            document.writeln(value);
+        }
+        document.writeln("<br>");
+        document.writeln("Array 2 elements are : ");
+        for(Value of array2){
+            document.writeln(value);
+        }
+        document.writeln("<br>");
+
+        array1.push.apply(array1,array2);
+        document.writeln("Concatenated Array elements are Array 1 elements will come first ... : ");
+        document.writeln("<br>");
+        document.writeln(array1);
+
+        document.writeln("<br>");
+        array2.push.apply(array2,array1);
+        document.writeln("Concatenated Array elements are aRRAY 2 Elements will come first .... : ");
+        document.writeln("<br>");
+        document.writeln(array2);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement Marks </title>
+</head>
+<body>
+    <script>
+        document.write("<h4> Switch case for checking grade of student</h4>")
+        var marks=prompt("Enter your Marks : ");
+    
+    switch(true){
+        case marks>90:{
+            document.write("Grade is A");
+            break;
+        }case marks>80 && marks<=90:{
+            document.write("Grade is B");
+            break;
+        }case marks>65 && marks<=80:{
+            document.write("Grade is C");
+            break;
+        }case marks>50 && marks<=65:{
+            document.write("Grade is D");
+            break;
+        }case marks>35&&marks<=50:{
+            document.write("Grade is E");
+            break;
+        }
+        default:{
+            document.write("write supply ");
+        }
+    }
+        
+    </script>
+    
+</body>
+</html>

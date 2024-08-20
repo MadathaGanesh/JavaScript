@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Method .... </title>
+</head>
+<body>
+    <script>
+        document.writeln("window.confirm() method ....... ");
+        document.writeln("<br>");
+        function msg(){
+
+            var temp=confirm("Choose one from above two options to confirm ");
+            if(temp==true){
+                window.alert("Selected Option is OK! ");
+            }else{
+                window.alert("Selected Option is Cancel! ");
+            }
+        }
+    
+    </script>
+    <button onclick="msg()"> Click me! </button>
+</body>
+</html>

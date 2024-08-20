@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Functions</title>
+  </head>
+  <body>
+    <h3>Math Functions { Sign() method and trunc() method. }</h3>
+    <script>
+      document.writeln("<h4> sign() method </h4>");
+      // sign() method is used to represent whether the number is a positive number or negative number .
+      // Positive numbers are represented by '1'.
+      // Negative Numbers are represented by '-1'.
+      // Zero (0) iis represented by zero .
+      // Nan (Not a Number ) is represented by Nan .
+      let num1 = 10;
+      document.writeln(
+        `Positive Number using sign() method :`,
+        Math.sign(num1),
+        `<br>`
+      );
+      let num2 = -243;
+      document.writeln(
+        `Negative Number using sign() method :`,
+        Math.sign(num2),
+        `<br>`
+      );
+      let num3 = 0;
+      document.writeln(
+        `Positive Zero using sign() method :`,
+        Math.sign(num3),
+        `<br>`
+      );
+      let num4 = NaN;
+      document.writeln(
+        `{ Not a Number } Nan using sign() method :`,
+        Math.sign(num4),
+        `<br>`
+      );
+      let num5 = -0;
+      document.writeln(
+        `Negative Zero using sign() method :`,
+        Math.sign(num5),
+        `<br>`
+      );
+
+      document.writeln(`<h4> trunc() method </h4>`);
+      // trunc() method will display only numbers which are before the decimal number .
+      let num11 = 1243.4333;
+      document.writeln(
+        `Using trunc() method : num11 is ::`,
+        Math.trunc(num11),
+        `<br>`
+      );
+      let num22 = -343.843;
+      document.writeln(
+        `Using trunc() method : num22 is ::`,
+        Math.trunc(num22),
+        `<br>`
+      );
+      let num33 = 0.02232;
+      document.writeln(
+        `Using trunc() method : num33 is ::`,
+        Math.trunc(num33),
+        `<br>`
+      );
+    </script>
+  </body>
+</html>

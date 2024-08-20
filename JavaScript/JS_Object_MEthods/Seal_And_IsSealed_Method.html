@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seal() and Is_Sealed() Method .... </title>
+</head>
+<body>
+    <script>
+        document.writeln("<h4> Seal() and Is_Sealed() Method .... </h4>");
+
+        document.writeln("<h4> By applying seal() Method we cannot add new properties and we cannot delete old properties ,But we can only modify the value of property .... </h4>");
+
+        var object1={   // Creating an object with attribute name .... 
+            name:"Ganesh",
+        }
+
+        var object2=Object.seal(object1);    // Applying seal() Method to object1
+
+        object2.name="Madatha";
+        console.log("After applying seal() Method  : ",object2.name);
+
+        delete object2.name;
+
+        console.log("After Deleting also the value will appear   : ",object2.name);
+
+
+        // Checking whether the Object and its value is sealed() or not 
+
+        console.log(" Applying isSealed() Method to check whether the object and its value is sealed or not ");
+        console.log(" Checking object2.name is sealed or not : " ,Object.isSealed(object2.name));
+        console.log("Checking object2 is sealed or not : "+Object.isSealed(object2));
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keywords</title>
+  </head>
+  <body>
+    <h3>Var let and const Keywords</h3>
+    <script>
+      // Var keyword , let keyword and const keyword
+
+      // var keyword is accessed globally ,
+      // let keyword is accessed till its block scope { block which is declared }
+      // const keyword is used to declare constant words .
+      const number = 120;
+      document.writeln("const value before changing its value is : " + number);
+      //number = 240;
+      //document.writeln("const value after changing its value is  : " + number);
+
+      var num = 10;
+      document.writeln(".....number declared using var is : " + num);
+      num = "new value 253";
+
+      function LetKeyword() {
+        let clg = "Vaagdevi";
+        let x = "Ganesh";
+        document.writeln(
+          "....let keyword value printing inside block is : " + x + "\n"
+        );
+        x = "new assigned name";
+        document.writeln(
+          "....let keyword value printing inside block using new assigned value is : " +
+            x +
+            "\n"
+        );
+        document.writeln(
+          "....Clg name declared with var keyword is : " + clg + "\n"
+        );
+        document.writeln(
+          "....num value inside function re-assigned value is : " + num
+        );
+      }
+      LetKeyword();
+      //   document.writeln(
+      //     "let keyword value printing outside block is i shows error as it is not declared : " + x + "\n"
+      //   );
+    </script>
+  </body>
+</html>

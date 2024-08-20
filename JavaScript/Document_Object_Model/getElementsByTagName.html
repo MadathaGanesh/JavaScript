@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsElementByTagName() Example .........  </title>
+</head>
+<body>
+    
+    <p>This is First P tag</p> 
+    <p>This is First P tag</p>  
+    <p>This is First P tag</p>  
+    <p>This is First P tag</p>  
+    <p>This is First P tag</p> 
+    <p>This is First P tag</p>  
+    <p>This is First P tag</p>  
+    <p>This is First P tag</p> 
+
+    <form >
+        <button onclick="functionName()"> Click ME!</button>
+    </form>
+    <script>
+        function functionName(){
+            var P_tags=document.getElementsByTagName("p");
+            var form_tags=document.getElementsByTagName("form");
+            alert("No of p tags are : "+P_tags.length);
+            alert("No of form tags are : "+form_tags.length);
+        }
+    </script>
+</body>
+</html>

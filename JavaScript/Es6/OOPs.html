@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPs in Javascript</title>
+  </head>
+  <body>
+    <h3>OOPS in Javascript</h3>
+    <script>
+      // Class , Object ,Constructor and Inheritance .
+      class ClassName {
+        // with the help of constructor keyword and constructor, we are passing data to method .
+        constructor(name, age, place) {
+          this.myname = name;
+          this.myage = age;
+          this.myplace = place;
+        }
+
+        methodname() {
+          document.writeln(
+            `My name is ${this.myname}. My Age is ${this.myage}. I am from ${this.myplace}.`
+          );
+        }
+      }
+
+      class Players extends ClassName {
+        constructor(name, age, place, game) {
+          super(name, age, place);
+          this.gamename = game;
+        }
+        playerdata() {
+          document.writeln(
+            super.methodname(),
+            `.I am a player of ${this.gamename}`
+          );
+        }
+      }
+
+      // A method can have multiple objects with different values.
+      //let object1 = new ClassName("Ganesh", 21, "Warangal"); // While creating objects we have to pass values .
+      // let object2 = new ClassName("Nananaa", 23, "Punjab");
+      // object1.methodname();
+      // object2.methodname();
+
+      let data = new Players("Ganesh", 21, "Warangal", "Cricket");
+      data.playerdata();
+    </script>
+  </body>
+</html>

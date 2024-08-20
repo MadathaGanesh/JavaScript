@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function call without class but using direct object </title>
+</head>
+<body>
+    <script>
+        document.write("<h4> Adding two numbers with the help of object without class . </h4>");
+        var addition=new Function("num1","num2","return num1+num2");
+        document.write("Sum of two numbers is : "+addition(10,20));
+        document.write("<br>");
+
+        var subtract=new Function("num3","num4","return num3-num4");
+        document.writeln("Difference is : "+subtract(30,10));
+        document.write("<br>");
+
+
+        var multiply=new Function("num4","num5","return num4*num5");
+        document.writeln("Product is : "+multiply(10,2));
+        document.write("<br>");
+
+
+        var division=new Function("num5","num6","return num5/num6");
+        document.writeln("Division is : "+division(20,3));
+        document.write("<br>");
+
+        var modulo=new Function("num7","num8","return num7%num8");
+        document.writeln("Modulus is : "+modulo(20,3));
+        document.write("<br>")
+
+
+        document.writeln("<h4> Using power function to know the power value .... </h4>");
+        var powervalue=new Function("num1","num2","return Math.pow(num1,num2)");
+        document.writeln("Power value is : "+powervalue(5,3));
+
+
+
+        
+    </script>
+</body>
+</html>

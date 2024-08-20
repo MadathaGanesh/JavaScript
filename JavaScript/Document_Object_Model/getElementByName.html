@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName() Example ............ </title>
+</head>
+<body>
+   
+    <form >
+        Male : <input type="radio" name="Gender"  value="Male">
+        <br>
+        Female : <input type="radio" name="Gender" value="Female">
+
+        <br><br>
+
+        <button onclick="functionName()"> Click Me !</button>
+
+
+    </form>
+    <script>
+        function functionName(){
+            var x=document.getElementsByName("Gender");
+            alert("Total Genders Available : "+x.length);
+        }
+
+    </script>
+</body>
+</html>

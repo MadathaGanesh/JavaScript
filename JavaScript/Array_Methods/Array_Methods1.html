@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods 1
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.writeln("<h3>Concat() Method </h3>");
+        const arr1=["Vikram","santanam","Rolex","Leo","Arjun"]
+        const arr2=["Vijay","talapathi","Shreya","Pablo"]
+        document.writeln("Arr1 elements are : "+arr1);
+        document.writeln("<br>");
+        document.writeln("Arr2 elements are : "+arr2);
+        document.writeln("<br>");
+        document.writeln("After Concatenation elements are : "+arr1.concat(arr2));
+
+        document.writeln("<br><br><h3>CopywithIn() Method </h3>");
+        document.writeln("Copied elements are :  "+arr2.copyWithin(0,1,2));
+
+
+        document.writeln("<br><br><h3>entries() Method </h3>");
+        // It will print values in { key:value } pair and the keys are their index values
+        var entiesvalues=arr1.entries();
+        for(value of entiesvalues){
+            document.writeln(value + "<br>");
+        }
+
+
+        document.writeln("<br><br><h3>every() method </h3>");
+        let arr4=[33,45,25,65,43,34];
+        function check(ress){
+            return ress>30;
+        }
+        function check1(num){
+           return num>20;
+        }
+        document.writeln("All numbers are greater than 30 : "+arr4.every(check));
+        document.writeln("<br>");
+        document.writeln("All numbers are greater than 20 : "+arr4.every(check1));
+
+        document.writeln("<br><br><h3>flat() method </h3>");
+        // Conversion of MultiDimensional Array ti Single Dimensional Array 
+        let FlatArray=[[10,20,22],[33,21,45],[32,43,7]];
+        document.writeln("Flattened array is : "+FlatArray.flat());
+
+        document.writeln("<br><br><h3>flatMap() method </h3>");
+        let array8=[32,22,56,63,34];
+        var flatMappedArray=array8.flatMap(x=>[x/2])
+        document.writeln("flatMappedArray elements are : "+flatMappedArray);
+
+</script>
+</body>
+</html>
